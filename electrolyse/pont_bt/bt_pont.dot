@@ -1,0 +1,32 @@
+digraph BTpont {
+
+// noeuds
+//   invhouse : racine
+//   octagon : selector
+//   cds : sequence
+//   box3d : parallel
+//   diamond : decorator
+//   oval : condition
+//   box : action
+//   note : commentaire
+
+{ node[shape=invhouse]; bt_pont; };
+
+{ node[shape=octagon]; un_tick; };
+
+{ node[shape=box3d]; bris_pauses; };
+
+{ node[shape=invhouse]; bt_bris; };
+
+{ node[shape=invhouse]; bt_pauses; };
+
+{ node[shape=invhouse]; bt_operations; };
+
+
+// aretes
+
+bt_pont->un_tick->bris_pauses->bt_bris;
+bris_pauses->bt_pauses;
+un_tick->bt_operations;
+
+}

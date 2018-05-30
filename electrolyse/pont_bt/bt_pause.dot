@@ -1,0 +1,40 @@
+digraph BTpauses {
+
+// noeuds
+//   invhouse : racine
+//   octagon : selector
+//   cds : sequence
+//   box3d : parallel
+//   diamond : decorator
+//   oval : condition
+//   box : action
+//   note : commentaire
+
+{ node[shape=invhouse]; bt_pauses; };
+  { node[shape=cds]; pauses; };
+    { node[shape=diamond]; inverse; };
+      { node[shape=oval]; liste_des_pauses_vide; };
+    { node[shape=box]; get_pause_and_set_bb; };
+    { node[shape=cds]; repos; };
+      { node[shape=oval]; precondition; };
+      { node[shape=box]; pretache; };
+      { node[shape=oval]; delay; };
+        { node[shape=box]; tache; };
+      { node[shape=oval]; postcondition; };
+      { node[shape=box]; posttache; };
+
+      { node[shape=note]; pop_pause [label="pop pause complete"]; };
+
+
+// aretes
+
+bt_pauses->pauses->inverse->liste_des_pauses_vide;
+pauses->get_pause_and_set_bb;
+pauses->repos->precondition;
+repos->pretache;
+repos->delay->tache;
+repos->postcondition;
+repos->posttache;
+pop_pause->posttache [style=dotted];
+
+}

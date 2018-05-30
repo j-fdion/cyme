@@ -1,0 +1,37 @@
+digraph BToperation {
+
+// noeuds
+//   invhouse : racine
+//   octagon : selector
+//   cds : sequence
+//   box3d : parallel
+//   diamond : decorator
+//   oval : condition
+//   box : action
+//   note : commentaire
+
+{ node[shape=invhouse]; bt_operation; };
+  { node[shape=cds]; operation; };
+    { node[shape=diamond]; inverse; };
+      { node[shape=oval]; liste_des_operations_vide; };
+    { node[shape=box]; get_operation_and_set_bb; };
+    { node[shape=cds]; opere; };
+      { node[shape=oval]; precondition; };
+      { node[shape=box]; pretache; };
+      { node[shape=oval]; delay; };
+        { node[shape=box]; tache; };
+      { node[shape=oval]; postcondition; };
+      { node[shape=box]; posttache; };
+
+
+// aretes
+
+bt_operation->operation->inverse->liste_des_operations_vide;
+operation->get_operation_and_set_bb;
+operation->opere->precondition;
+opere->pretache;
+opere->delay->tache;
+opere->postcondition;
+opere->posttache;
+
+}

@@ -1,0 +1,41 @@
+digraph BTbris {
+
+// noeuds
+//   invhouse : racine
+//   octagon : selector
+//   cds : sequence
+//   box3d : parallel
+//   diamond : decorator
+//   oval : condition
+//   box : action
+//   note : commentaire
+
+{ node[shape=invhouse]; bt_bris; };
+  { node[shape=cds]; bris; };
+    { node[shape=diamond]; inverse; };
+      { node[shape=oval]; liste_des_bris_vide; };
+    { node[shape=box]; get_bris_and_set_bb; };
+    { node[shape=cds]; repare; };
+      { node[shape=oval]; precondition; };
+      { node[shape=box]; pretache; };
+      { node[shape=oval]; delay; };
+        { node[shape=box]; tache; };
+      { node[shape=oval]; postcondition; };
+      { node[shape=box]; posttache; };
+
+      { node[shape=note]; pop_bris [label="pop bris complete"]; };
+
+
+// aretes
+
+bt_bris->bris->inverse->liste_des_bris_vide;
+bris->get_bris_and_set_bb;
+bris->repare->precondition;
+repare->pretache;
+repare->delay->tache;
+repare->postcondition;
+repare->posttache;
+pop_bris->posttache [style=dotted];
+
+
+}

@@ -1,0 +1,250 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "90fff1ae-8692-4e74-9766-97c5701267b2",
+    "display": {
+        "camera_x": 730.5,
+        "camera_y": 455.5,
+        "camera_z": 1,
+        "x": -368,
+        "y": 0
+    },
+    "properties": {},
+    "nodes": {
+        "90fff1ae-8692-4e74-9766-97c5701267b2": {
+            "id": "90fff1ae-8692-4e74-9766-97c5701267b2",
+            "name": "Actif",
+            "title": "Actif",
+            "description": "",
+            "display": {
+                "x": -240,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "child": "1ba5b18a-9b88-46ad-862b-8e94879a1852"
+        },
+        "1ba5b18a-9b88-46ad-862b-8e94879a1852": {
+            "id": "1ba5b18a-9b88-46ad-862b-8e94879a1852",
+            "name": "MemSequence",
+            "title": "MemSequence",
+            "description": "",
+            "display": {
+                "x": -112,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "95b8acae-c851-4b09-80bc-30f32fd83d17",
+                "dece399d-615c-464e-8873-6e06b8cda805",
+                "0070db8b-5bdc-418f-b227-d438b68717b9"
+            ]
+        },
+        "53d29f90-e61d-433c-8496-3eaa2257b500": {
+            "id": "53d29f90-e61d-433c-8496-3eaa2257b500",
+            "name": "RepeatUntilSuccess",
+            "title": "Repeat Until Success",
+            "description": "",
+            "display": {
+                "x": 272,
+                "y": -176
+            },
+            "parameters": {
+                "maxLoop": -1
+            },
+            "properties": {},
+            "child": "4bbd55cd-a4ad-49a8-80d7-b2e62113e69b"
+        },
+        "95b8acae-c851-4b09-80bc-30f32fd83d17": {
+            "id": "95b8acae-c851-4b09-80bc-30f32fd83d17",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 32,
+                "y": -96
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "53d29f90-e61d-433c-8496-3eaa2257b500",
+                "25262081-77ae-41a4-8d0e-37b7202cfee6"
+            ]
+        },
+        "8010422e-9302-40c3-8922-fded787d2ede": {
+            "id": "8010422e-9302-40c3-8922-fded787d2ede",
+            "name": "Pre-conditions",
+            "title": "Pre-conditions",
+            "description": "",
+            "display": {
+                "x": 656,
+                "y": -176
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "25262081-77ae-41a4-8d0e-37b7202cfee6": {
+            "id": "25262081-77ae-41a4-8d0e-37b7202cfee6",
+            "name": "Tâche",
+            "title": "Tâche",
+            "description": "",
+            "display": {
+                "x": 256,
+                "y": -96
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "dece399d-615c-464e-8873-6e06b8cda805": {
+            "id": "dece399d-615c-464e-8873-6e06b8cda805",
+            "name": "Delay",
+            "title": "Delay",
+            "description": "",
+            "display": {
+                "x": 32,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "child": "bb1d4b77-177d-407d-b1d1-bfdf6ffe3cc5"
+        },
+        "bb1d4b77-177d-407d-b1d1-bfdf6ffe3cc5": {
+            "id": "bb1d4b77-177d-407d-b1d1-bfdf6ffe3cc5",
+            "name": "Tâche",
+            "title": "Tâche",
+            "description": "",
+            "display": {
+                "x": 256,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "0070db8b-5bdc-418f-b227-d438b68717b9": {
+            "id": "0070db8b-5bdc-418f-b227-d438b68717b9",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 32,
+                "y": 96
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "04e35b3b-00c9-4392-8b67-7b27666784df",
+                "0ace259e-dd67-4ef4-9400-af3956ba7482"
+            ]
+        },
+        "04e35b3b-00c9-4392-8b67-7b27666784df": {
+            "id": "04e35b3b-00c9-4392-8b67-7b27666784df",
+            "name": "RepeatUntilSuccess",
+            "title": "Repeat Until Success",
+            "description": "",
+            "display": {
+                "x": 272,
+                "y": 96
+            },
+            "parameters": {
+                "maxLoop": -1
+            },
+            "properties": {},
+            "child": "b547eb35-dec5-458b-8707-c9c02588df66"
+        },
+        "3a4c32b9-9580-4923-902f-b06851595bd3": {
+            "id": "3a4c32b9-9580-4923-902f-b06851595bd3",
+            "name": "Post-conditions",
+            "title": "Post-conditions",
+            "description": "",
+            "display": {
+                "x": 656,
+                "y": 96
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "0ace259e-dd67-4ef4-9400-af3956ba7482": {
+            "id": "0ace259e-dd67-4ef4-9400-af3956ba7482",
+            "name": "Tâche",
+            "title": "Tâche",
+            "description": "",
+            "display": {
+                "x": 256,
+                "y": 192
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "4bbd55cd-a4ad-49a8-80d7-b2e62113e69b": {
+            "id": "4bbd55cd-a4ad-49a8-80d7-b2e62113e69b",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 480,
+                "y": -208
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "8010422e-9302-40c3-8922-fded787d2ede"
+            ]
+        },
+        "ba754d5d-a8e8-4cf9-bafd-65422d077ce4": {
+            "id": "ba754d5d-a8e8-4cf9-bafd-65422d077ce4",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": 480,
+                "y": -144
+            },
+            "parameters": {},
+            "properties": {},
+            "children": []
+        },
+        "b547eb35-dec5-458b-8707-c9c02588df66": {
+            "id": "b547eb35-dec5-458b-8707-c9c02588df66",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 480,
+                "y": 96
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "3a4c32b9-9580-4923-902f-b06851595bd3"
+            ]
+        }
+    },
+    "custom_nodes": [
+        {
+            "name": "Actif",
+            "title": "Actif",
+            "category": "decorator"
+        },
+        {
+            "name": "Delay",
+            "title": "Delay",
+            "category": "decorator"
+        },
+        {
+            "name": "Tâche",
+            "title": "Tâche",
+            "category": "action"
+        },
+        {
+            "name": "Pre-conditions",
+            "title": "Pre-conditions",
+            "category": "condition"
+        },
+        {
+            "name": "Post-conditions",
+            "title": "Post-conditions",
+            "category": "condition"
+        }
+    ]
+}
